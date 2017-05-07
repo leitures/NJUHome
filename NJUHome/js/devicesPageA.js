@@ -28,6 +28,7 @@ var detaila = new Vue({
   el: '#data-typea-body',
   data: {
     devices_url: config.globalData.AliHost+'/cc/data',
+    ccData: ''
     //device_id: '357651'
   },
   mounted: function() {
@@ -42,10 +43,10 @@ var detaila = new Vue({
       }).then(function(response) {
         // console.log((response.data.jsonData));
         // console.log(typeof(response.data.jsonData));
-        var ccData = response.data.jsonData;
-        for (room in ccData){
+        this.ccData = response.data.jsonData;
+        for (room in this.ccData){
           console.log(room);
-          console.log(ccData[room])
+          console.log(this.ccData[room])
         }
 
       })

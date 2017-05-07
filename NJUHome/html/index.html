@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="../js/vue.js"></script>
-  <script src="../js/vue-resource.js"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <script src="../js/flexible.debug.js"></script>
+  <script src="../js/flexible_css.debug.js"></script>
+  <link type="text/css" rel="stylesheet" href="../css/common.css" />
+
   <title>Document</title>
 </head>
+
 <body>
+  <div id="data-typea-body" class="container">
+    <device-index v-bind:devices="ccData"></device-index>
 
-
+  </div>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/vue.js"></script>
+  <script src="../js/vue-resource.js"></script>
+  <script src="../js/devicesPageATemplate.js"></script>
+  <script src="../js/devicesPageA.js"></script>
 </body>
+
 </html>

@@ -1,31 +1,43 @@
-p {
-  font-size: 0.32rem
-}
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: space-between;
   padding: 1.3333rem 0;
   box-sizing: border-box;
 }
 
-.roominfo {
+.sensorinfo {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
 }
 
-.roominfo-avatar {
+.sensorinfo-avatar {
   width: 0.8533rem;
   height: 0.8533rem;
   margin: 0.2rem;
   border-radius: 50%;
 }
 
-.roominfo-nickname {
+.sensorinfo-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  /*justify-content: flex-start;*/
+}
+
+.sensorinfo-name {
   color: #aaa;
+}
+
+.sensorinfo-text .sensorinfo-data {
+  color: #aaa;
+  margin-left: auto;
+  margin-right:50px;
 }
 
 .usermotto {

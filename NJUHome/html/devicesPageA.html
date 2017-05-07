@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
   <script src="../js/flexible.debug.js"></script>
   <script src="../js/flexible_css.debug.js"></script>
   <link type="text/css" rel="stylesheet" href="../css/common.css" />
@@ -13,15 +15,9 @@
 
 <body>
   <div id="data-typea-body" class="container">
-    <div class="userinfo">
-      <img class="userinfo-avatar" src="../img/icon.png"/>
-      <p class="userinfo-nickname">
-        刘磊
-      </p>
-    </div>
+    <device-index v-bind:devices="ccData"></device-index>
+
   </div>
-
-
   <script src="../js/jquery.min.js"></script>
   <script src="../js/config.js"></script>
   <script src="../js/utils.js"></script>

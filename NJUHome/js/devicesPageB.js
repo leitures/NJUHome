@@ -1,29 +1,3 @@
-// $.ajax({
-//         type: 'GET',
-//         url: 'http://joymebook.oss-cn-shanghai.aliyuncs.com/1.txt',
-//         headers: {
-//           // 'U-ApiKey': '6441e70eefc58fea0b1e938abf946a28',
-//           // 'U-ApiKey2': '222'
-//         },
-//
-//         dataType: 'json',
-//         success: function(res) {
-//             console.log(res);
-//         }
-//     });
-
-// $.ajax({
-//   url: 'http://api.yeelink.net/v1.0/devices',
-//   headers: {
-//     Accept: "application/json; charset=utf-8",
-//     'U-ApiKey': '6441e70eefc58fea0b1e938abf946a28'
-//   },
-//   type: "get",
-//   success: function(data) {
-//
-//   }
-// });
-
 var detaila = new Vue({
   el: '#data-typeb-body',
   data: {
@@ -44,9 +18,9 @@ var detaila = new Vue({
         console.log('this is all devices:')
         var devices_info = JSON.parse(response.data.chunk);
         console.log(devices_info);
-        for(var i = 0;i<devices_info.length;i++){
-          console.log(devices_info[i].id);
-          this.getDevice(devices_info[i].id);
+        
+        for(device in devices_info){
+          console.log(devices_info[device]);
         }
 
       })

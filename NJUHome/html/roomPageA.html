@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+  <script src="../js/flexible.debug.js"></script>
+  <script src="../js/flexible_css.debug.js"></script>
+  <!-- <link type="text/css" rel="stylesheet" href="../css/common.css" /> -->
+  <link type="text/css" rel="stylesheet" href="../css/roomPage.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="data-typea-body" class="container">
+    <div v-for="item in itemName">
+      <div class="sensorinfo" v-if="item == 'name'">
+        <img class="sensorinfo-avatar" src="../img/roomA.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            房间名：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'tmp'">
+        <img class="sensorinfo-avatar" src="../img/tmp.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            温度：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'hum'">
+        <img class="sensorinfo-avatar" src="../img/hum.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            湿度：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'flame'">
+        <img class="sensorinfo-avatar" src="../img/flame.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            火焰指数：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'alarm'">
+        <img class="sensorinfo-avatar" src="../img/alarm.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            火警指数：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'soil'">
+        <img class="sensorinfo-avatar" src="../img/soil.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            土壤状态：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'light'">
+        <img class="sensorinfo-avatar" src="../img/light.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            光亮指数：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'sound'">
+        <img class="sensorinfo-avatar" src="../img/sound.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            噪音指数：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'ult'">
+        <img class="sensorinfo-avatar" src="../img/ult.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            距离探测：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'water'">
+        <img class="sensorinfo-avatar" src="../img/water.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            水位检测：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'vi'">
+        <img class="sensorinfo-avatar" src="../img/vi.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            震动检测：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'ult'">
+        <img class="sensorinfo-avatar" src="../img/ult.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            距离探测：
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else-if="item == 'updatetime'">
+        <img class="sensorinfo-avatar" src="../img/updatetime.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            更新时间
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+      <div class="sensorinfo" v-else>
+        <img class="sensorinfo-avatar" src="../img/icon.png" />
+        <div class="sensorinfo-text">
+          <p class="sensorinfo-name">
+            {{item}}:
+          </p>
+          <p class="sensorinfo-data">
+            {{roomData[item]}}
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/vue.js"></script>
+  <script src="../js/vue-resource.js"></script>
+  <script src="../js/roomPageA.js"></script>
+  <script src="../js/roomPageATemplate.js"></script>
+</body>
+
+</html>
