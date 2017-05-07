@@ -1,0 +1,6 @@
+{"time":"2017-05-07 11:12:19",
+"userState":"0",
+"roomA":[{"tmp":"24.000","hum":"30.000","flame":"57.000","alarm":"normal!","soil":"thirsty","light":"760per"}],
+"roomB":[{"tmp":"24.000","hum":"30.000","light":"758per","sound":"291per","ult":"182cm"}],
+"roomC":[{"tmp":"24.000","hum":"30.000","light":"758per","water":"0cm","vi":"0","soil":"thirsty"}]
+}

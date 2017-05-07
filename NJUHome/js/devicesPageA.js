@@ -27,8 +27,7 @@
 var detaila = new Vue({
   el: '#data-typea-body',
   data: {
-    devices_url: config.globalData.YeeHost+'/devices',
-    device_url: config.globalData.YeeHost+'/device',
+    devices_url: config.globalData.AliHost+'/cc/data',
     //device_id: '357651'
   },
   mounted: function() {
@@ -41,24 +40,17 @@ var detaila = new Vue({
       this.$http.get(this.devices_url, {
         emulateJSON: true
       }).then(function(response) {
-        console.log('this is all devices:')
-        var devices_info = JSON.parse(response.data.chunk);
-        console.log(devices_info);
-        for(var i = 0;i<devices_info.length;i++){
-          console.log(devices_info[i].id);
-          this.getDevice(devices_info[i].id);
+        // console.log((response.data.jsonData));
+        // console.log(typeof(response.data.jsonData));
+        var ccData = response.data.jsonData;
+        for (room in ccData){
+          console.log(room);
+          console.log(ccData[room])
         }
 
       })
     },
-    getDevice: function(device_id) {
-      this.$http.get(this.device_url+'/'+device_id, {
-        emulateJSON: true
-      }).then(function(response) {
-        console.log('this is the one device:'+device_id)
-        console.log(JSON.parse(response.data.chunk));
-      })
-    }
+
 
   }
 })

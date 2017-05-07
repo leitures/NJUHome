@@ -6,33 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="../js/flexible.debug.js"></script>
   <script src="../js/flexible_css.debug.js"></script>
-  <script src="../js/index.js"></script>
+  <link type="text/css" rel="stylesheet" href="../css/common.css" />
 
   <title>Document</title>
 </head>
 
 <body>
-  <div id="data-typea-body">
-
-
+  <div id="data-typea-body" class="container">
+    <div class="userinfo">
+      <img class="userinfo-avatar" src="../img/icon.png"/>
+      <p class="userinfo-nickname">
+        刘磊
+      </p>
+    </div>
   </div>
-  <div id="data-typea-body">
-    <canvas id="c1" style="width:416px;height:218px;"></canvas>
-    <script>
-      GM.Global.pixelRatio = 2;
-      var data = [
-        {"tem": 10, "city": "tokyo"},
-        {"tem": 4, "city": "newYork"},
-        {"tem": 3, "city": "berlin"}
-      ];
-      var chart = new GM.Chart({
-        id: 'c1'
-      });
-      chart.source(data);
-      chart.interval().position('city*tem').color('city');
-      chart.render();
-    </script>
-  </div>
+
 
   <script src="../js/jquery.min.js"></script>
   <script src="../js/config.js"></script>
