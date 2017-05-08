@@ -16,7 +16,9 @@
   <div id="data-typeb-body">
     <section class="ui-panel">
       <h2 class="ui-arrowlink">Yeelink数据源<span class="ui-panel-subtitle">{{items.length}}条</span></h2>
-      <device-index v-bind:items="items"></device-index>
+      <!-- <device-index v-bind:items="items"></device-index> -->
+      <sensor-index v-bind:items="items"></sensor-index>
+
 
     </section>
 
@@ -29,8 +31,8 @@
   <script src="../js/utils.js"></script>
   <script src="../js/vue.js"></script>
   <script src="../js/vue-resource.js"></script>
-  <script src="../js/devicesPageBTemplate.js"></script>
-  <script src="../js/devicesPageB.js"></script>
+  <script src="../js/roomPageBTemplate.js"></script>
+  <script src="../js/roomPageB.js"></script>
 </body>
 
 </html>

@@ -3,6 +3,8 @@ var detaila = new Vue({
   data: {
     devices_url: config.globalData.YeeHost+'/devices',
     device_url: config.globalData.YeeHost+'/device',
+    devices: '',
+    items: []
     //device_id: '357651'
   },
   mounted: function() {
@@ -18,10 +20,15 @@ var detaila = new Vue({
         console.log('this is all devices:')
         var devices_info = JSON.parse(response.data.chunk);
         console.log(devices_info);
-        
+        this.devices = devices_info;
+
+
         for(device in devices_info){
-          console.log(devices_info[device]);
+          console.log(devices_info[device].id);
+          this.getDevice(devices_info[device].id);
         }
+        console.log('finally we get the items list:');
+        console.log(this.items);
 
       })
     },
@@ -30,7 +37,12 @@ var detaila = new Vue({
         emulateJSON: true
       }).then(function(response) {
         console.log('this is the one device:'+device_id)
-        console.log(JSON.parse(response.data.chunk));
+        var device_data = JSON.parse(response.data.chunk);
+
+        device_data.push(device_id);
+        console.log(device_data);
+        console.log('device data is:');
+        this.items.push(device_data);
       })
     }
 
