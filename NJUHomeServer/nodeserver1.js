@@ -44,7 +44,7 @@ app.get('/devices', function (req, res, next) {
  * @return {[type]}        [description]
  */
 app.get('/device/:device_id', function (req, res) {
-  console.log('!!!!!!!!!!!!!');
+  // console.log('!!!!!!!!!!!!!');
   var device_id = req.params.device_id;
   //res.send(req.params)
 

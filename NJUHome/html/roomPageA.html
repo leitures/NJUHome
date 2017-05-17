@@ -18,7 +18,10 @@
   <div id="data-typea-body" class="container">
     <div v-for="item in itemName">
       <div class="sensorinfo" v-if="item == 'name'">
-        <img class="sensorinfo-avatar" src="../img/roomA.png" />
+        <img class="sensorinfo-avatar" v-if="roomData[item] == 'roomA'" src="../img/roomA.png"/>
+        <img class="sensorinfo-avatar" v-else-if="roomData[item] == 'roomB'" src="../img/roomB.png"/>
+        <img class="sensorinfo-avatar" v-else-if="roomData[item] == 'roomC'" src="../img/roomC.png"/>
+        <img class="sensorinfo-avatar" v-else src="../img/roomA.png"/>
         <div class="sensorinfo-text">
           <p class="sensorinfo-name">
             房间名：
