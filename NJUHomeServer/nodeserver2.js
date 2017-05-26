@@ -30,6 +30,10 @@ app.get('/cc/data/:room_id', function (req, res, next) {
   res.json({result})
 })
 
+app.get('/cc/data/:room_id/history',function(req, res, next) {
+
+})
+
 
 app.listen(8889, function () {
   console.log('CORS-enabled web server listening on port 8889')

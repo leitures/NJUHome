@@ -26,8 +26,19 @@ var detaila = new Vue({
           this.itemName.push(i);
         }
         console.log(this.itemName);
+        this.getHistory();
+
       })
     },
+
+    getHistory: function() {
+      this.$http.get(this.devices_url+room_id+'/history', {
+        emulateJSON: true
+      }).then(function(res) {
+        console.log('history');
+        console.log(res);
+      })
+    }
 
 
   }
